@@ -48,7 +48,7 @@ export function ServicesSection() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-sm tracking-[0.3em] text-accent uppercase mb-4 font-sans">
+          <p className="text-sm tracking-[0.3em] text-primary uppercase mb-4 font-sans">
             Our Services
           </p>
           <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-6 text-foreground">
@@ -64,9 +64,8 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
             >
               {/* Image */}
               <div className={`relative aspect-[4/3] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
@@ -80,14 +79,14 @@ export function ServicesSection() {
 
               {/* Content */}
               <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="text-sm tracking-[0.2em] text-accent uppercase mb-3 font-sans">
+                <p className="text-sm tracking-[0.2em] text-primary uppercase mb-3 font-sans">
                   {service.title}
                 </p>
-                
+
                 <h3 className="font-serif text-2xl md:text-4xl mb-4 text-foreground">
                   {service.tagline}
                 </h3>
-                
+
                 <p className="text-muted-foreground leading-relaxed mb-8 text-lg font-sans">
                   {service.description}
                 </p>
@@ -103,9 +102,9 @@ export function ServicesSection() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
                   asChild
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-5 text-sm tracking-wide group"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-5 text-sm tracking-wide group"
                 >
                   <Link href="#contact">
                     Get Started

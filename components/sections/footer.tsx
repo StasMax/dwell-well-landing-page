@@ -1,19 +1,17 @@
 import Link from "next/link"
-import { Instagram, Mail, Phone } from "lucide-react"
+import Image from "next/image" // Added import for Image component
+import { Instagram, Mail, Phone, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="py-16 bg-primary text-primary-foreground">
+    <footer className="py-16 bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <span className="font-serif text-2xl tracking-wide">DWELL WELL</span>
-              <span className="text-xs tracking-[0.3em] ml-2 opacity-80 font-sans">NYC</span>
-            </Link>
+            {/* Branding Removed per user request */}
             <p className="opacity-80 leading-relaxed max-w-md font-sans">
-              Professional home organization services for New York City. 
+              Professional home organization services for New York, San Francisco & Los Angeles.
               We transform spaces into sanctuaries—one room at a time.
             </p>
           </div>
@@ -50,8 +48,8 @@ export function Footer() {
             <h4 className="font-serif text-lg mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="mailto:hello@dwellwellnyc.com" 
+                <a
+                  href="mailto:hello@dwellwellnyc.com"
                   className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity text-sm font-sans"
                 >
                   <Mail className="w-4 h-4" />
@@ -59,8 +57,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="tel:+12125550123" 
+                <a
+                  href="tel:+12125550123"
                   className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity text-sm font-sans"
                 >
                   <Phone className="w-4 h-4" />
@@ -68,9 +66,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://instagram.com/dwellwellnyc" 
-                  target="_blank" 
+                <a
+                  href="https://instagram.com/dwellwellnyc"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity text-sm font-sans"
                 >
@@ -78,14 +76,25 @@ export function Footer() {
                   @dwellwellnyc
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/dwellwellnyc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity text-sm font-sans"
+                >
+                  <Facebook className="w-4 h-4" />
+                  DwellWell NYC
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-secondary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm opacity-60 font-sans">
-            © {new Date().getFullYear()} Dwell Well NYC. All rights reserved.
+            © 2026 Dwell Well NYC. All rights reserved. Powered by <a href="https://sharconai.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Sharcon</a>.
           </p>
           <p className="text-sm opacity-60 font-sans">
             Serving Manhattan, Brooklyn, Queens & Beyond

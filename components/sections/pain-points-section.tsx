@@ -30,14 +30,14 @@ export function PainPointsSection() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm tracking-[0.3em] text-accent uppercase mb-4 font-sans">
+          <p className="text-sm tracking-[0.3em] text-primary uppercase mb-4 font-sans">
             Sound Familiar?
           </p>
           <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-6 text-foreground">
             Living in Chaos Costs More Than You Think
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed font-sans">
-            The stress of disorganization doesn't just clutter your space—it clutters your mind, 
+            The stress of disorganization doesn't just clutter your space—it clutters your mind,
             drains your time, and dims your joy.
           </p>
         </div>
@@ -52,17 +52,17 @@ export function PainPointsSection() {
               <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center mb-6">
                 <point.icon className="w-6 h-6 text-primary" />
               </div>
-              
+
               <h3 className="font-serif text-xl mb-4 text-foreground">
                 {point.title}
               </h3>
-              
+
               <p className="text-muted-foreground leading-relaxed mb-6 font-sans">
                 {point.description}
               </p>
-              
+
               <div className="pt-4 border-t border-border">
-                <p className="text-sm text-accent font-medium font-sans italic">
+                <p className="text-sm text-primary font-medium font-sans italic">
                   "{point.trigger}"
                 </p>
               </div>

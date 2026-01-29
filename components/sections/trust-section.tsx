@@ -1,33 +1,22 @@
+import Image from "next/image"
+
 export function TrustSection() {
-  const pressLogos = [
-    { name: "The New York Times", abbr: "NYT" },
-    { name: "Real Simple", abbr: "RS" },
-    { name: "Architectural Digest", abbr: "AD" },
-    { name: "Domino", abbr: "DOM" },
-    { name: "Apartment Therapy", abbr: "AT" },
-  ]
-
   return (
-    <section className="py-16 md:py-20 bg-secondary border-y border-border">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <p className="text-center text-sm tracking-[0.2em] text-muted-foreground uppercase mb-10 font-sans">
-          As Featured In
-        </p>
-
-        {/* Press Logos */}
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-          {pressLogos.map((logo) => (
-            <div
-              key={logo.name}
-              className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
-            >
-              {/* Placeholder for actual logos - using text representation */}
-              <span className="font-serif text-xl md:text-2xl tracking-wide text-foreground">
-                {logo.name}
-              </span>
-            </div>
-          ))}
+    <section className="py-6 md:py-8 bg-white border-y border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <h2 className="text-sm font-medium tracking-wider text-muted-foreground uppercase">
+            As Featured In
+          </h2>
+          <div className="relative w-full max-w-5xl aspect-[10/1]">
+            <Image
+              src="/images/press-banner.jpg"
+              alt="Featured in Living, Washington Post, Real Simple, NYT, House Beautiful, Glamour, InStyle"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

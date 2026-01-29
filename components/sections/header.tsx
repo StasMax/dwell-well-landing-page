@@ -2,59 +2,52 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm"
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl tracking-wide text-foreground">
-              DWELL WELL
-            </span>
-            <span className="text-xs tracking-[0.3em] text-muted-foreground font-sans">NYC</span>
+          <Link href="/" className="relative h-12 w-48">
+            <Image
+              src="/images/logo.png"
+              alt="DwellWell NYC"
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link 
-              href="#services" 
+            <Link
+              href="#services"
               className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
             >
               Services
             </Link>
-            <Link 
-              href="#method" 
+            <Link
+              href="#method"
               className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
             >
               Our Method
             </Link>
-            <Link 
-              href="#about" 
+            <Link
+              href="#about"
               className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
             >
               About
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="/contacts"
               className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
             >
               Contact
@@ -63,11 +56,11 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
+            <Button
               asChild
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 text-sm tracking-wide"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-2 text-sm tracking-wide"
             >
-              <Link href="#contact">Book a Consultation</Link>
+              <Link href="/contacts">Book a Consultation</Link>
             </Button>
           </div>
 
@@ -85,39 +78,39 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4 space-y-4">
-            <Link 
-              href="#services" 
+            <Link
+              href="#services"
               className="block text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </Link>
-            <Link 
-              href="#method" 
+            <Link
+              href="#method"
               className="block text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Our Method
             </Link>
-            <Link 
-              href="#about" 
+            <Link
+              href="#about"
               className="block text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="/contacts"
               className="block text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </Link>
-            <Button 
+            <Button
               asChild
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 text-sm tracking-wide"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-2 text-sm tracking-wide"
             >
-              <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Book a Consultation</Link>
+              <Link href="/contacts" onClick={() => setIsMobileMenuOpen(false)}>Book a Consultation</Link>
             </Button>
           </nav>
         )}

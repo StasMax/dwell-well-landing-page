@@ -28,21 +28,21 @@ export function LocalContextSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Content */}
           <div>
-            <p className="text-sm tracking-[0.3em] text-accent uppercase mb-4 font-sans">
+            <p className="text-sm tracking-[0.3em] text-primary uppercase mb-4 font-sans">
               Why Dwell Well NYC
             </p>
             <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-6 text-foreground">
               We Know NYC Spaces <span className="italic">Intimately</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-sans">
-              Founded by Marla Alt, Dwell Well NYC was born from the belief that everyone 
-              deserves to love their home—no matter how many square feet they have. 
-              With years of experience organizing Manhattan apartments and Brooklyn brownstones, 
+              Founded by Marla Alt, Dwell Well NYC was born from the belief that everyone
+              deserves to love their home—no matter how many square feet they have.
+              With years of experience organizing Manhattan apartments and Brooklyn brownstones,
               we've mastered the art of maximizing space without sacrificing style.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed font-sans">
-              We're not just organizers. We're your neighbors, fellow New Yorkers who 
-              understand that your apartment isn't just a place to sleep—it's your sanctuary 
+              We're not just organizers. We're your neighbors, fellow New Yorkers who
+              understand that your apartment isn't just a place to sleep—it's your sanctuary
               in the city that never sleeps.
             </p>
           </div>
