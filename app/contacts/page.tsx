@@ -86,32 +86,39 @@ export default function ContactsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Social */}
+                                    {/* Instagram */}
                                     <div className="bg-white p-6 rounded-lg border border-border flex flex-col items-start space-y-4 hover:shadow-sm transition-shadow">
                                         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                                             <Instagram className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h3 className="font-serif text-lg mb-1">Social</h3>
-                                            <div className="space-y-1">
-                                                <a
-                                                    href="https://instagram.com/dwellwellnyc"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-muted-foreground hover:text-primary transition-colors font-sans block text-sm"
-                                                >
-                                                    @dwellwellnyc (IG)
-                                                </a>
-                                                <a
-                                                    href="https://www.facebook.com/dwellwellnyc"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans block text-sm"
-                                                >
-                                                    <Facebook className="w-3 h-3" />
-                                                    DwellWell NYC
-                                                </a>
-                                            </div>
+                                            <h3 className="font-serif text-lg mb-1">Instagram</h3>
+                                            <a
+                                                href="https://instagram.com/dwellwellnyc"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted-foreground hover:text-primary transition-colors font-sans block text-sm"
+                                            >
+                                                @dwellwellnyc
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    {/* Facebook */}
+                                    <div className="bg-white p-6 rounded-lg border border-border flex flex-col items-start space-y-4 hover:shadow-sm transition-shadow">
+                                        <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                            <Facebook className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-serif text-lg mb-1">Facebook</h3>
+                                            <a
+                                                href="https://www.facebook.com/dwellwellnyc"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted-foreground hover:text-primary transition-colors font-sans block text-sm"
+                                            >
+                                                DwellWell NYC
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
