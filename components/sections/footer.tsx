@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image" // Added import for Image component
 import { Instagram, Mail, Phone, Facebook } from "lucide-react"
 
 export function Footer() {
