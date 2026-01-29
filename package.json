@@ -2,8 +2,8 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=20"
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
   },
   "scripts": {
     "build": "next build",

@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { useConsultationModal } from "@/components/consultation-modal"
 
 export function HeroSection() {
+  const { openModal } = useConsultationModal()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
@@ -37,14 +42,12 @@ export function HeroSection() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button 
-            asChild
             size="lg"
+            onClick={openModal}
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base tracking-wide group"
           >
-            <Link href="#contact">
-              Begin Your Transformation
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            Begin Your Transformation
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
           
           <Button 
@@ -57,13 +60,6 @@ export function HeroSection() {
               Explore Our Services
             </Link>
           </Button>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-foreground/50 rounded-full" />
-          </div>
         </div>
       </div>
     </section>

@@ -1,13 +1,15 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useConsultationModal } from "@/components/consultation-modal"
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { openModal } = useConsultationModal()
 
   return (
     <header
@@ -57,10 +59,10 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              asChild
+              onClick={openModal}
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-2 text-sm tracking-wide"
             >
-              <Link href="/contacts">Book a Consultation</Link>
+              Book a Consultation
             </Button>
           </div>
 
@@ -107,10 +109,13 @@ export function Header() {
               Contact
             </Link>
             <Button
-              asChild
+              onClick={() => {
+                setIsMobileMenuOpen(false)
+                openModal()
+              }}
               className="w-full bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-2 text-sm tracking-wide"
             >
-              <Link href="/contacts" onClick={() => setIsMobileMenuOpen(false)}>Book a Consultation</Link>
+              Book a Consultation
             </Button>
           </nav>
         )}
